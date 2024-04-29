@@ -1,2 +1,105 @@
 @use 'variables' as *;
-@use 'reset' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  margin: auto;
+  display: flex;
+  width: $breakpoint--desktop--large;
+  justify-content: space-around;
+
+  @media (max-width: $breakpoint--desktop--regular) {
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: $breakpoint--desktop--large) {
+    width: $width--flex-parent;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: $breakpoint--desktop--medium) {
+    display: block;
+    width: auto;
+  }
+}
+
+.card {
+  width: $width--card;
+
+  &--heading {
+    background-color: #6ccb91;
+    padding: 12px 0;
+  }
+
+  &--image {
+    width: $width--card;
+
+    @media (max-width: $breakpoint--desktop--medium) {
+      margin: auto;
+    }
+  }
+
+  @media (max-width: $breakpoint--desktop--medium) {
+    margin: auto;
+  }
+}
+
+h1 {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 50px;
+  font-family: "Questrial Display";
+}
+
+h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+nav li {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  padding: 10px 20px;
+  background-color: #82b3e9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 10px;
+}
+
+nav li:hover {
+  background-color: #0056b3;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+nav a {
+  color: azure;
+  text-decoration: none;
+}
+
+.card--heading {
+  border-radius: 15px;
+}
+
+img {
+  border-radius: 15px;
+}
+
+p {
+  margin-top: 20px;
+  text-align: center;
+}

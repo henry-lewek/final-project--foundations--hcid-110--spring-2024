@@ -1,0 +1,24 @@
+// Grid-related Variables
+$grid-column: 60px;
+$grid-gutter: calc($grid-column / 3);
+$grid-unit: calc($grid-column + $grid-gutter);
+
+// Widths
+$width--flex-parent: calc(12 * $grid-unit); // 960px
+$width--card: calc(5 * $grid-unit);         // 400px
+
+// Breakpoints
+$breakpoint--desktop--large: calc(16.685 * $grid-unit); // 1335px
+$breakpoint--desktop--medium: calc(12.5 * $grid-unit);  // 1000px
+$breakpoint--desktop--regular: calc(18.9125 * $grid-unit); // 1513px
+
+// Fonts
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
